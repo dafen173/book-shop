@@ -9,7 +9,7 @@ const nav = document.createElement('div')
 nav.className = 'navbar'
 
 let navAnchor = document.createElement('a')
-navAnchor.href = '../index.html'
+navAnchor.href = './index.html'
 nav.appendChild(navAnchor)
 
 let title = document.createElement('h2')
@@ -149,7 +149,6 @@ let createCards = function (obj){
     qty.id = obj.id
     qty.textContent = search.item === undefined ? 0 : search.item
     buttons.appendChild(qty)
-
 
     let plusSign = document.createElement('div')
     plusSign.className = 'plus-btn'

@@ -74,7 +74,7 @@ let generateCartItems = () => {
 
             return `
             <div class='cart-item'>
-                <img class='img-cart-product' width='100px' src=${search.imageLink} alt='' />
+                <img class='img-cart-product' width='100px' src='.${search.imageLink}' alt='' />
                 <div class="details">
                     <div class="title-price-x">
                         <h4 class='title-price'>
