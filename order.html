@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <main id="container">
+        <form class="form-name" name="form_name" onsubmit="formHandler()" action=''>
+            <h2>Order page</h2>
+            <label for="name" id="label-name">Name:
+                <br>
+                <input type="text" id="name" minlength="4" pattern="^[a-zA-Zа-яА-Я]+$" required
+                    onchange="enableSubmit()"
+                    title="The length not less than 4 symbols, strings only, without spaces!">
+                <span id="" class="span span-name"></span>
+            </label>
+            <label for="surname" id="label-surname">Surname:
+                <br>
+                <input type="text" id="surname" minlength="5" pattern="^[a-zA-Zа-яА-Я]+$" required
+                    onchange="enableSubmit()"
+                    title="The length not less than 5 symbols, strings only, without spaces!">
+                    <span id="" class="span span-surname"></span>
+            </label>
+            <label for="date" id="label-date">Delivery date:
+                <br>
+                <input type="date" id="date" onchange="enableSubmit()" onkeyup="enableSubmit()" required>
+                <span id="" class="span span-date"></span>
+            </label>
+            <label for="street" id="label-street">Street:
+                <br>
+                <input type="text" id="street" minlength="5" pattern="^[a-zA-Zа-яА-Я0-9 ]+$" required
+                    onchange="enableSubmit()"
+                    title="The length not less than 5 symbols!">
+                    <span id="" class="span span-street"></span>
+            </label>
+            <label for="house" id="label-house">House number:
+                <br>
+                <input type="number" id="house" min="0" oninput="validity.valid||(value='')" onchange="enableSubmit()" required>
+                <span id="" class="span span-house"></span>
+            </label>
+            <label for="flat" id="label-flat">Flat number:
+                <br>
+                <input type="text" id="flat" pattern="^[0-9]+$|^[0-9]+[-]*[0-9]+$" required
+                    onchange="enableSubmit()"
+                    title="Numbers only, positive numbers only, the dash symbol is allowed. Means, the flat number shouldn't
+                            start with minus/dash symbol. For example: -37 is invalid, but 1-37 is valid.">
+                    <span id="" class="span span-flat"></span>
+            </label>
+            <div class="radio-container">
+                <label for="cash" class="form-radio">
+                    <input type="radio" id="cash" name="one" class="radio-btn" onchange="enableSubmit()" required>
+                    <span class="radio"></span>
+                    <span class="text">Cash</span>
+                </label>
+                <label for="card" class="form-radio">
+                    <input type="radio" id="card" name="one" class="radio-btn" onchange="enableSubmit()" required>
+                    <span class="radio"></span>
+                    <span class="text">Card</span>
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <label for="">Choose 2 gifts: (optional):</label>
+                <label class="checkbox-label" for="gift1">
+                    <input type="checkbox" id="gift1" name="check[]" value="CheckBox 1"/>
+                    pack as a gift
+                </label>
+                <label class="checkbox-label" for="gift2">
+                    <input type="checkbox" id="gift2" name="check[]" value="CheckBox 2"/>
+                    add postcard
+                </label>
+                <label class="checkbox-label" for="gift3">
+                    <input type="checkbox" id="gift3" name="check[]" value="CheckBox 3"/>
+                    provide 2% discount to the next time
+                </label>
+                <label class="checkbox-label" for="gift4">
+                    <input type="checkbox" id="gift4" name="check[]" value="CheckBox 4"/>
+                    branded pen or pencil
+                </label>
+            </div>
+            <input class="submit-btn" type="submit" value="Complete" disabled>
+        </form>
+    </main>
+</body>
+<script src="./src/data.js"></script>
+<script src="src/order.js"></script>
+</html>
