@@ -18,7 +18,7 @@ title.textContent = 'Books shop'
 navAnchor.appendChild(title)
 
 let cartAnchor = document.createElement('a')
-cartAnchor.href = '../cart.html'
+cartAnchor.href = '../cart/cart.html'
 nav.appendChild(cartAnchor)
 
 let cart = document.createElement('div')
@@ -31,7 +31,7 @@ cartAmount.textContent = '0'
 cart.appendChild(cartAmount)
 
 let iconCart = new Image()
-iconCart.src = './assets/images/shopping-cart.svg'
+iconCart.src = '../assets/images/shopping-cart.svg'
 iconCart.alt = 'cart icon'
 iconCart.className = 'icon-cart'
 cart.prepend(iconCart)
@@ -81,13 +81,13 @@ let generateCartItems = () => {
                             <p>${search.title}</p>
                             <p class='cart-item-price'>$ ${search.price}</p>
                         </h4>
-                        <img onclick='removeItem(${id})' class='x-sign' width="10px" src="assets/icons/x-symbol.svg" alt="x sign">
+                        <img onclick='removeItem(${id})' class='x-sign' width="10px" src="../assets/icons/x-symbol.svg" alt="x sign">
                     </div>
 
                     <div class="buttons">
-                        <img onclick="decrement(${id})" class="minus" src="./assets/icons/minus-line.svg" alt="minus-sign">
+                        <img onclick="decrement(${id})" class="minus" src="../assets/icons/minus-line.svg" alt="minus-sign">
                         <div id=${id} class="qty">${item}</div>
-                        <img onclick="increment(${id})" class="plus" src="./assets/icons/plus.svg" alt="plus-sign">
+                        <img onclick="increment(${id})" class="plus" src="../assets/icons/plus.svg" alt="plus-sign">
                     </div>
 
                     <h3>$ ${item * search.price}</h3>
@@ -171,7 +171,7 @@ let totalAmount = () => {
         // console.log(amount)
         label.innerHTML = `
             <h2>Total Bill: $ ${amount}</h2>
-            <a class="order-link" href="order.html">
+            <a class="order-link" href="../order/order.html">
                 <button class="checkout">Confirm order</button>
             </a>
 

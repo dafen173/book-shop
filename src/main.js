@@ -18,7 +18,7 @@ title.textContent = 'Books shop'
 navAnchor.appendChild(title)
 
 let cartAnchor = document.createElement('a')
-cartAnchor.href = '../cart.html'
+cartAnchor.href = './cart/cart.html'
 nav.appendChild(cartAnchor)
 
 let cart = document.createElement('div')
