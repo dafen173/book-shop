@@ -39,7 +39,7 @@ cartAnchor.appendChild(cart)
 
 
 docFrag.appendChild(nav)
-// docFrag.appendChild(labelContainer)
+
 render.prepend(docFrag)
 
 //==================================================================
