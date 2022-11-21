@@ -30,7 +30,7 @@ cartAmount.textContent = '0'
 cart.appendChild(cartAmount)
 
 let iconCart = new Image()
-iconCart.src = './assets/images/shopping-cart.svg'
+iconCart.src = '../assets/images/shopping-cart.svg'
 iconCart.alt = 'cart icon'
 iconCart.className = 'icon-cart'
 cart.prepend(iconCart)
