@@ -99,7 +99,7 @@ let generateCartItems = () => {
         shoppingCart.innerHTML = ``
         label.innerHTML = `
         <h2>Cart is Empty</h2>
-        <a href='index.html'>
+        <a href='../index.html'>
             <button class='home-btn'>Back to home</button>
         </a>
         `
